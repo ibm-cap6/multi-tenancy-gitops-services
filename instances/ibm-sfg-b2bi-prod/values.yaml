@@ -151,7 +151,7 @@ ingress:
   port:
 
 dataSetup:
-  enabled: false
+  enabled: true
   upgrade: false
   image:
     repository: "cp.icr.io/cp/ibm-b2bi/b2bi-dbsetup"
@@ -275,11 +275,11 @@ setupCfg:
 
   # Provide the DB attributes
   dbVendor: db2
-  dbHost: 172.21.6.2
+  dbHost: 172.21.57.252
   dbPort: 50000
   dbData: B2BIDB
   dbDrivers: db2jcc4.jar
-  dbCreateSchema: false
+  dbCreateSchema: true
   oracleUseServiceName: false
   # Values can be either true or false 
   usessl: false
@@ -318,9 +318,9 @@ setupCfg:
   jmsConnectionFactory: com.ibm.mq.jms.MQQueueConnectionFactory
   jmsConnectionFactoryInstantiator:
   jmsQueueName: DEV.QUEUE.1
-  jmsHost: 172.21.187.39
+  jmsHost: 172.21.207.193
   jmsPort: 1414
-  jmsConnectionNameList: 172.21.187.39(1414)
+  jmsConnectionNameList: 172.21.207.193(1414)
   # Applicable for IBMMQ
   jmsChannel: DEV.APP.SVRCONN
   jmsEnableSsl: false
@@ -328,7 +328,6 @@ setupCfg:
   # Name of JMS secret if available
   jmsSecret: b2b-jms-secret
 
-  SANDBOX_LAUNCH_CLA2_SERVER: true
   # Specify JMS keystore file name including it's path relative to the mounted resources volume location, if applicable.
   # When jmsKeystoreSecret is mentioned, provide the name of the key holding the certificate data.
   jmsKeystorePath: 
@@ -389,7 +388,7 @@ setupCfg:
   sapSncLibName:  
 
 asi:
-  replicaCount: 1
+  replicaCount: 2
   
   env:
     jvmOptions:
@@ -468,11 +467,11 @@ asi:
         targetPort: 30201
         nodePort: 30201
         protocol: TCP
-      # - name: adapter-2
-      #   port: 30202
-      #   targetPort: 30202
-      #   nodePort: 30202
-      #   protocol: TCP
+      - name: adapter-2
+        port: 30202
+        targetPort: 30202
+        nodePort: 30202
+        protocol: TCP
     portRanges: []
       # - name: adapters
       #   portRange: 30301-30400
@@ -516,7 +515,7 @@ asi:
     
   ingress:
     internal:
-      host: asi-b2bi-prod.itzroks-664003h6xc-kpjujb-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud
+      host: asi-itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
       tls:
         enabled: true
         secretName: ""
@@ -708,7 +707,7 @@ asi:
       
 ac:
 
-  replicaCount: 1
+  replicaCount: 2
 
   env:
     jvmOptions:
@@ -763,6 +762,11 @@ ac:
         targetPort: 30401
         nodePort: 30401
         protocol: TCP
+      - name: adapter-1
+        port: 30402
+        targetPort: 30402
+        nodePort: 30402
+        protocol: TCP
     portRanges: []
       # - name: adapters
       #   portRange: 30501-30600
@@ -792,7 +796,7 @@ ac:
       
   ingress:
     internal:
-      host: ac-b2bi-prod.itzroks-664003h6xc-kpjujb-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud
+      host: ac-itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
       tls:
         enabled: true
         secretName: ""
@@ -1038,7 +1042,7 @@ api:
 
   ingress:
     internal:
-      host: api-b2bi-prod.itzroks-664003h6xc-kpjujb-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud
+      host: api-itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
       tls:
         enabled: true
         secretName: ""
