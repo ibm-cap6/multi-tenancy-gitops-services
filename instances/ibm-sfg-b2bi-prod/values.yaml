@@ -515,7 +515,7 @@ asi:
     
   ingress:
     internal:
-      host: asi-itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
+      host: asi.itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
       tls:
         enabled: true
         secretName: ""
@@ -796,7 +796,7 @@ ac:
       
   ingress:
     internal:
-      host: ac-itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
+      host: ac.itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
       tls:
         enabled: true
         secretName: ""
@@ -1042,7 +1042,7 @@ api:
 
   ingress:
     internal:
-      host: api-itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
+      host: api.itzroks-664003h6xc-mo6som-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-east.containers.appdomain.cloud
       tls:
         enabled: true
         secretName: ""
