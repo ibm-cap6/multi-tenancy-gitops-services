@@ -151,7 +151,7 @@ ingress:
   port:
 
 dataSetup:
-  enabled: true
+  enabled: false
   upgrade: false
   image:
     repository: "cp.icr.io/cp/ibm-b2bi/b2bi-dbsetup"
@@ -279,7 +279,7 @@ setupCfg:
   dbPort: 50000
   dbData: B2BIDB
   dbDrivers: db2jcc4.jar
-  dbCreateSchema: true
+  dbCreateSchema: false
   oracleUseServiceName: false
   # Values can be either true or false 
   usessl: false
@@ -388,7 +388,7 @@ setupCfg:
   sapSncLibName:  
 
 asi:
-  replicaCount: 2
+  replicaCount: 1
   
   env:
     jvmOptions:
@@ -467,11 +467,11 @@ asi:
         targetPort: 30201
         nodePort: 30201
         protocol: TCP
-      - name: adapter-2
-        port: 30202
-        targetPort: 30202
-        nodePort: 30202
-        protocol: TCP
+      # - name: adapter-2
+      #   port: 30202
+      #   targetPort: 30202
+      #   nodePort: 30202
+      #   protocol: TCP
     portRanges: []
       # - name: adapters
       #   portRange: 30301-30400
@@ -707,7 +707,7 @@ asi:
       
 ac:
 
-  replicaCount: 2
+  replicaCount: 1
 
   env:
     jvmOptions:
@@ -762,10 +762,10 @@ ac:
         targetPort: 30401
         nodePort: 30401
         protocol: TCP
-      - name: adapter-1
-        port: 30402
-        targetPort: 30402
-        nodePort: 30402
+      # - name: adapter-2
+      #   port: 30402
+      #   targetPort: 30402
+      #   nodePort: 30402
         protocol: TCP
     portRanges: []
       # - name: adapters
