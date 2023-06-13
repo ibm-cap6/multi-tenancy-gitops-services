@@ -83,10 +83,10 @@ serviceAccount:
 resourcesInit:
   enabled: true
   image:
-    repository: "cp.icr.io/cp/ibm-b2bi"
-    name: "b2bi-resources"
-    tag: "6.1.2.2"
-    digest: sha256:1d9045511c1203e6d6d25ed32c700dfca230076412915857c2c40b1409151b7c
+    repository: "quay.io/pnuw_ibm"
+    name: "b2bi-init"
+    tag: "0.1"
+    digest: sha256:a1d9fc73a373621b5dfeb9f434f2a87ceb589ca788a120a9d4e8a25a021db55e
     pullPolicy: "IfNotPresent"
   command:
 
