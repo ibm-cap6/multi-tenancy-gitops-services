@@ -80,25 +80,25 @@ arch:
 serviceAccount:
   name: default
 
-# resourcesInit:
-#   enabled: true
-#   image:
-#     repository: "quay.io/pnuw_ibm"
-#     name: "b2bi-init"
-#     tag: "0.2"
-#     digest: sha256:e3e0bc596111210833f59533b643f22f8fad5ebfb1d1ad69ff7e0d4862bf531a
-#     pullPolicy: "IfNotPresent"
-#   command:
-
 resourcesInit:
   enabled: true
   image:
-    repository: "cp.icr.io/cp/ibm-b2bi"
-    name: "b2bi-resources"
-    tag: "6.1.2.2"
-    digest: sha256:1d9045511c1203e6d6d25ed32c700dfca230076412915857c2c40b1409151b7c
+    repository: "quay.io/pnuw_ibm"
+    name: "b2bi-init"
+    tag: "0.2"
+    digest: sha256:e3e0bc596111210833f59533b643f22f8fad5ebfb1d1ad69ff7e0d4862bf531a
     pullPolicy: "IfNotPresent"
   command:
+
+# resourcesInit:
+#   enabled: true
+#   image:
+#     repository: "cp.icr.io/cp/ibm-b2bi"
+#     name: "b2bi-resources"
+#     tag: "6.1.2.2"
+#     digest: sha256:1d9045511c1203e6d6d25ed32c700dfca230076412915857c2c40b1409151b7c
+#     pullPolicy: "IfNotPresent"
+#   command:
 
 persistence:
   enabled: true
