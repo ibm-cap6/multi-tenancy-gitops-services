@@ -85,8 +85,8 @@ resourcesInit:
   image:
     repository: "quay.io/pnuw_ibm"
     name: "b2bi-init"
-    tag: "0.2"
-    digest: sha256:e3e0bc596111210833f59533b643f22f8fad5ebfb1d1ad69ff7e0d4862bf531a
+    tag: "0.3"
+    digest: 
     pullPolicy: "IfNotPresent"
   command:
 
