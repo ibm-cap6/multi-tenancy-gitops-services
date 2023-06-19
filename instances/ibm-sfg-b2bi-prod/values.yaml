@@ -83,10 +83,10 @@ serviceAccount:
 resourcesInit:
   enabled: true
   image:
-    repository: "quay.io/pnuw_ibm"
-    name: "b2bi-init"
-    tag: "0.8"
-    digest: 
+    repository: "icr.io/sfg-b2bi"
+    name: "init-container"
+    tag: "latest"
+    digest: sha256:c9da3f03ebbc8fb515df6d58ca38f9ca646f3eba4445527a2a50a99fc7d8ec25
     pullPolicy: "IfNotPresent"
   command:
 
